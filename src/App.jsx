@@ -12,7 +12,7 @@ function App() {
                 src="./images/bg-card-back.png"
                 alt=""
               />
-              <span className="absolute top-16 right-8">000</span>
+              <span className="absolute top-16 right-8 font-sm">000</span>
             </div>
             <div className="w-11/12 absolute top-32 left-[-12px]">
               <img
