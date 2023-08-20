@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="min-h-screen overflow-hidden flex flex-col">
+      <div className="min-h-screen overflow-hidden flex flex-col sm:grid sm:grid-cols-[1fr_2fr]">
         <div className="bg-img-mobile bg-cover bg-no-repeat relative flex flex-col items-center">
           <img className="invisible" src="./images/bg-main-mobile.png" alt="" />
 
@@ -12,7 +12,7 @@ function App() {
                 src="./images/bg-card-back.png"
                 alt=""
               />
-              <div className="absolute top-16 right-8">000</div>
+              <span className="absolute top-16 right-8">000</span>
             </div>
             <div className="w-11/12 absolute top-32 left-[-12px]">
               <img
@@ -46,7 +46,7 @@ function App() {
                 id="name"
                 name="name"
                 placeholder="e.g. Jane Appleseed"
-                className="border-2 w-full rounded-lg p-2 tracking-wider"
+                className="border-2 w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent"
               />
             </div>
             <div className="space-y-1">
@@ -58,7 +58,7 @@ function App() {
                 id="number"
                 name="number"
                 placeholder="e.g. 1234 5678 9123 4567"
-                className="border-2 w-full rounded-lg p-2 tracking-wider"
+                className="border-2 w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent"
               />
             </div>
 
@@ -73,14 +73,14 @@ function App() {
                     id="month"
                     name="month"
                     placeholder="MM"
-                    className="border-2 w-full rounded-lg p-2 tracking-wider"
+                    className="border-2 w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent"
                   />
                   <input
                     type="text"
                     id="year"
                     name="year"
                     placeholder="YY"
-                    className="border-2 w-full rounded-lg p-2 tracking-wider"
+                    className="border-2 w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent"
                   />
                 </div>
               </div>
@@ -93,7 +93,7 @@ function App() {
                   id="cvv"
                   name="cvv"
                   placeholder="CVV"
-                  className="border-2 w-full rounded-lg p-2 tracking-wider"
+                  className="border-2 w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent"
                 />
               </div>
             </div>
