@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <div className="min-h-screen flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-none lg:place-content-center overflow-hidden relative">
+      <div className="min-h-screen flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-none lg:justify-items-center overflow-hidden relative">
         <img
           src="./images/bg-main-mobile.png"
           alt="mobile background"
@@ -10,24 +10,30 @@ function App() {
         <img
           src="./images/bg-main-desktop.png"
           alt=""
-          className="absolute left-0 w-1/3 min-h-screen hidden lg:block"
+          className="absolute left-0 min-h-screen hidden lg:block"
         />
-        <div className="w-full flex flex-col items-center">
-          <img
-            src="./images/bg-card-back.png"
-            alt="card back"
-            className="max-w-xs w-3/4 relative z-10 top-8 left-6 shadow-2xl rounded-xl"
-          />
-
-          <img
-            src="./images/bg-card-front.png"
-            alt="card front"
-            className="max-w-xs w-3/4 relative z-20 bottom-9 right-6 shadow-2xl rounded-xl"
-          />
+        <div className="max-w-md flex flex-col items-center">
+          <div className="top-8 left-8 lg:left-24 lg:top-60 lg:w-11/12 relative bg-img-card-back bg-cover bg-no-repeat w-3/4 z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.20)] rounded-xl">
+            <img
+              src="./images/bg-card-back.png"
+              alt="card back"
+              className="invisible"
+            />
+            <span className="absolute  top-[42.5%] right-[11%] lg:text-lg text-[0.9rem] text-white font-semibold">
+              000
+            </span>
+          </div>
+          <div className="bottom-9 right-8 lg:w-11/12 lg:left-4 lg:bottom-64 relative w-3/4 bg-img-card-front bg-cover bg-no-repeat z-10 drop-shadow-[0_20px_30px_rgba(0,0,0,0.20)] rounded-xl">
+            <img
+              src="./images/bg-card-back.png"
+              alt="card back"
+              className="invisible"
+            />
+          </div>
         </div>
 
         <article className="relative p-4 grid place-content-start">
-          <form className="flex flex-col gap-4 max-w-md">
+          <form className="flex flex-col gap-4 max-w-sm">
             <div className="space-y-1">
               <label htmlFor="name" className="font-semibold">
                 CARDHOLDER NAME
