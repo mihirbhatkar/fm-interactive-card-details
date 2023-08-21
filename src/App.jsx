@@ -1,32 +1,32 @@
 function App() {
   return (
     <>
-      <div className="h-screen grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none place-content-center overflow-hidden relative">
+      <div className="min-h-screen flex flex-col items-center lg:grid lg:grid-cols-2 lg:grid-rows-none lg:place-content-center overflow-hidden relative">
         <img
           src="./images/bg-main-mobile.png"
           alt="mobile background"
-          className="absolute top-0 z-0 lg:hidden transform scale-x-[5] h-1/3"
+          className="absolute top-0 z-[-100] lg:hidden transform scale-x-[5] h-1/3"
         />
         <img
           src="./images/bg-main-desktop.png"
           alt=""
           className="absolute left-0 w-1/3 min-h-screen hidden lg:block"
         />
-        <div className="relative flex items-center justify-center ">
+        <div className="w-full flex flex-col items-center">
           <img
             src="./images/bg-card-back.png"
             alt="card back"
-            className="absolute z-10 right-8 top-12 lg:right-8 lg:bottom-0 max-w-md w-3/4"
+            className="max-w-xs w-3/4 relative z-10 top-8 left-6 shadow-2xl rounded-xl"
           />
 
           <img
             src="./images/bg-card-front.png"
             alt="card front"
-            className="absolute z-20 left-8 bottom-14 lg:left-8 lg:top-0 max-w-md w-3/4"
+            className="max-w-xs w-3/4 relative z-20 bottom-9 right-6 shadow-2xl rounded-xl"
           />
         </div>
 
-        <article className="relative p-4 grid place-content-center">
+        <article className="relative p-4 grid place-content-start">
           <form className="flex flex-col gap-4 max-w-md">
             <div className="space-y-1">
               <label htmlFor="name" className="font-semibold">
