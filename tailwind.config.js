@@ -4,10 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "img-mobile": "url('./images/bg-main-mobile.png')",
-        "img-desktop": "url('./images/bg-main-desktop.png')",
-        "img-card-front": "url('./images/bg-card-front.png')",
-        "img-card-back": "url('./images/bg-card-back.png')",
+        "img-mobile": "url('/images/bg-main-mobile.png')",
+        "img-desktop": "url('/images/bg-main-desktop.png')",
+        "img-card-front": "url('/images/bg-card-front.png')",
+        "img-card-back": "url('/images/bg-card-back.png')",
       },
 
       colors: {

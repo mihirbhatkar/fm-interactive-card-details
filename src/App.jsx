@@ -136,7 +136,12 @@ function App() {
                 if (year.length !== 2) dispatch("wrong year");
                 if (number.length !== 16) dispatch("wrong number");
 
-                if (cvv.length == 3 && month.length == 2 && year.length == 2) {
+                if (
+                  cvv.length == 3 &&
+                  month.length == 2 &&
+                  year.length == 2 &&
+                  number.length == 16
+                ) {
                   setSuccess(true);
                 }
               }}
@@ -192,7 +197,7 @@ function App() {
                   <label htmlFor="month" className="font-semibold">
                     EXP.DATE(MM/YY)
                   </label>
-                  <div className="flex gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     <input
                       type="text"
                       id="month"
@@ -231,17 +236,17 @@ function App() {
                           : "border-2"
                       } w-full rounded-lg p-2 tracking-wider focus:border-violet-900 hover:cursor-pointer focus:outline-transparent`}
                     />
-                    {(alert.month.status && (
+                  </div>
+                  {(alert.month.status && (
+                    <span className="text-sm text-red-600 font-thin">
+                      2 digits req.
+                    </span>
+                  )) ||
+                    (alert.year.status && (
                       <span className="text-sm text-red-600 font-thin">
                         2 digits req.
                       </span>
-                    )) ||
-                      (alert.year.status && (
-                        <span className="text-sm text-red-600 font-thin">
-                          2 digits req.
-                        </span>
-                      ))}
-                  </div>
+                    ))}
                 </div>
                 <div className="flex flex-col gap-1">
                   <label htmlFor="cvv" className="font-semibold">
